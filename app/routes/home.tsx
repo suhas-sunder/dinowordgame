@@ -43,7 +43,7 @@ export function loader({ context }: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-  const { message, nextUpdateHint, launchWindow } = loaderData;
+  const { nextUpdateHint, launchWindow } = loaderData;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -52,6 +52,8 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         "@type": "WebSite",
         name: "Dino Word Game",
         url: "https://dinowordgame.com/",
+        description:
+          "Dino Word Game blends endless runner action with daily word puzzles. Jump obstacles, collect letters, and solve the daily word. Play free in your browser on desktop or mobile.",
         potentialAction: {
           "@type": "SearchAction",
           target: "https://dinowordgame.com/search?q={query}",
@@ -67,7 +69,81 @@ export default function Home({ loaderData }: Route.ComponentProps) {
         operatingSystem: "Web",
         genre: ["Endless Runner", "Word Game", "Puzzle"],
         description:
-          "A mashup of Chrome's offline dino runner and Wordle style word guessing. Jump obstacles, grab letters, and solve the daily word.",
+          "A mashup of Chrome's offline dino runner and Wordle style word guessing. Jump cacti, duck pterodactyls, grab letters, and solve the daily word with color feedback.",
+        features: [
+          "Daily word challenge",
+          "Skill plus vocabulary",
+          "Fast and lightweight",
+          "Clean controls",
+          "Share results",
+          "Privacy friendly",
+          "Practice mode",
+          "Accessibility options",
+          "Mobile and desktop play",
+          "Offline runner",
+          "Community sharing",
+          "Speedrunning and challenges",
+          "Learning and vocabulary gains",
+          "Fair play and puzzle integrity",
+          "Regional spelling support",
+          "Color accessibility",
+          "Streak building",
+        ],
+        modes: [
+          "Endless Runner",
+          "Word Puzzle",
+          "Practice Mode",
+          "Daily Challenge",
+          "Hard Mode",
+          "Fewest Guesses",
+          "Time Attack",
+          "Classroom and Family Play",
+        ],
+        accessibility: [
+          "Readable UI",
+          "Input options (keyboard, mouse, touch)",
+          "High contrast palette",
+          "Data light",
+        ],
+        educationalBenefits: [
+          "Vocabulary building",
+          "Phonics warmups",
+          "Letter frequency practice",
+          "Pattern recognition",
+          "Streak strategy",
+        ],
+        deviceSupport: ["Mobile", "Desktop", "Offline play after first load"],
+        community: [
+          "Share results",
+          "Compare streaks",
+          "Invite friends",
+          "Leaderboards (coming soon)",
+        ],
+        glossary: [
+          "Starter word",
+          "Elimination",
+          "Pickups",
+          "Hard mode",
+          "Streak",
+          "Seed",
+        ],
+        tips: [
+          "Balanced openers",
+          "Use pickups for new letters",
+          "Lock guesses after feedback",
+          "Watch obstacle rhythm",
+          "Alternate vowel/consonant probes",
+          "Reserve flex guess",
+          "Practice jump rhythm",
+          "Focus cues for fast play",
+          "Short practice runs for mobile",
+        ],
+        curationPolicy: [
+          "Core set for daily play",
+          "Extended set for advanced practice",
+          "Duplicate letter handling",
+          "Regional spelling support",
+        ],
       },
       {
         "@type": "FAQPage",
@@ -94,6 +170,62 @@ export default function Home({ loaderData }: Route.ComponentProps) {
             acceptedAnswer: {
               "@type": "Answer",
               text: "The runner is first. Word mode follows soon after the initial launch.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does it work offline?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. The runner works offline after your first load. The daily word syncs when you reconnect.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How do controls work?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Tap, click, or press space to jump. Use the down arrow to duck. Controls work on desktop and mobile.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is hard mode?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Hard mode requires you to use all revealed hints in your next guess for strict logic and challenge.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can I share my results?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Copy a clean text grid to share your win without spoilers. Leaderboards and events are planned.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is there a practice mode?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Practice mode offers unlimited runs and random words for warmup and skill building.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Is it accessible?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. The UI is readable, supports keyboard, mouse, and touch, and offers high contrast options.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How does streak building work?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Keep a consistent routine, warm up, and solve the daily word to build your streak.",
             },
           },
         ],
